@@ -1,0 +1,41 @@
+
+spring:
+  application:
+    name: student-service
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://auth-server:9000
+          jwk-set-uri: http://auth-server:9000/oauth2/jwks
+  zipkin:
+    base-url: http://zipkin:9411
+  data:
+    mongodb:
+      uri: mongodb+srv://ikub:ikub123@bulding-cluster.ltijm.mongodb.net/?retryWrites=true&w=majority
+      database: student-db
+#  profiles:
+#    active: docker
+
+management:
+  endpoint:
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: prometheus
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8080/eureka
+    fetch-registry: true
+    register-with-eureka: true
+  instance:
+    hostname: eureka-server
+    prefer-ip-address: true
+server:
+  port: 8084
