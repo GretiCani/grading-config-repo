@@ -11,7 +11,7 @@ spring:
     base-url: http://localhost:9411
   data:
     mongodb:
-      uri: mongodb+srv://ikub:ikub123@bulding-cluster.ltijm.mongodb.net/?retryWrites=true&w=majority
+      uri: mongodb://localhost:30001,localhost:30002,localhost:30003/?replicaSet=my-replica-set
       database: course-db
 
 management:
@@ -28,7 +28,7 @@ management:
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka-server:8080/eureka
+      defaultZone: http://localhost:8080/eureka
     fetch-registry: true
     register-with-eureka: true
   instance:

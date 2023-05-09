@@ -21,8 +21,6 @@ spring:
             issuer-uri: http://auth-server:9000
   zipkin:
     base-url: http://zipkin:9411
-#  profiles:
-#    active: docker
 management:
   endpoint:
     metrics:
