@@ -12,7 +12,7 @@ spring:
     base-url: http://zipkin:9411
   data:
     mongodb:
-      uri: mongodb://mongo1:30001,mongo2:30002,mongo3:30003/?replicaSet=my-replica-set
+      uri: mongodb+srv://ikub:ikub123@bulding-cluster.ltijm.mongodb.net/?retryWrites=true&w=majority
       database: student-db
 #  profiles:
 #    active: docker
