@@ -6,8 +6,8 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://host.docker.internal:9000
-          jwk-set-uri: http://host.docker.internal/oauth2/jwks
+          issuer-uri: http://auth-server:9000
+          jwk-set-uri: http://auth-server/oauth2/jwks
       client:
         registration:
           ikub-client:
@@ -18,7 +18,7 @@ spring:
             scope: openid
         provider:
           spring:
-            issuer-uri: http://host.docker.internal:9000
+            issuer-uri: http://auth-server:9000
   zipkin:
     base-url: http://zipkin:9411
 management:

@@ -17,7 +17,7 @@ spring:
             scope: openid
         provider:
           spring:
-            issuer-uri: http://host.docker.internal:9000
+            issuer-uri: http://auth-server:9000
   zipkin:
     base-url: http://zipkin:9411
   kafka:
