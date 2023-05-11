@@ -9,7 +9,7 @@ spring:
           jwk-set-uri: http://localhost:9000/oauth2/jwks
   data:
     mongodb:
-      uri: mongodb://localhost:30001,localhost:30002,localhost:30003/?replicaSet=my-replica-set
+      uri: mongodb+srv://ikub:ikub123@bulding-cluster.ltijm.mongodb.net/?retryWrites=true&w=majority
       database: student-db
   zipkin:
     base-url: http://localhost:9411
