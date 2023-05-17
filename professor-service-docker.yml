@@ -7,7 +7,7 @@ spring:
       resourceserver:
         jwt:
           issuer-uri: http://auth-server:9000
-          jwk-set-uri: http://auth-server:9000/oauth2/jwks
+          jwk-set-uri: http://auth-server/oauth2/jwks
       client:
         registration:
           ikub-client:
@@ -21,8 +21,6 @@ spring:
             issuer-uri: http://auth-server:9000
   zipkin:
     base-url: http://zipkin:9411
-#  profiles:
-#    active: docker
 management:
   endpoint:
     metrics:
@@ -51,3 +49,5 @@ resource:
     baseUrl: http://course-service:8087/course
   studentService:
     baseUrl: http://student-service:8084/student
+
+swagger.server.uri: http://gatewaw-service:8081/professor-service

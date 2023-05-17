@@ -29,8 +29,6 @@ spring:
             use-native-decoding: true
   zipkin:
     base-url: http://zipkin:9411
-#  profiles:
-#    active: docker
 
 management:
   endpoint:
@@ -54,3 +52,5 @@ eureka:
     prefer-ip-address: true
 server:
   port: 8082
+
+swagger.server.uri: http://gateway-service:8081/notification-service
